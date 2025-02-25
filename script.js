@@ -16,16 +16,16 @@ let movesCount = 0;
 let time = 0;
 let timer;
 
-// Lista de imágenes (puedes reemplazarlas con URLs o rutas de imágenes)
-const images = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼"];
-const cardPairs = [...images, ...images]; // Duplicamos las imágenes para formar parejas
 
-// Baraja las cartas de forma aleatoria
+const images = ["🐶", "🐱", "🐭", "🐹", "🐰", "🦊", "🐻", "🐼"];
+const cardPairs = [...images, ...images]; 
+
+
 const shuffleCards = () => {
   cardPairs.sort(() => Math.random() - 0.5);
 };
 
-// Inicia el temporizador
+
 const startTimer = () => {
   timer = setInterval(() => {
     time++;
@@ -33,7 +33,7 @@ const startTimer = () => {
   }, 1000);
 };
 
-// Muestra las cartas en el tablero
+
 const generateCards = () => {
   shuffleCards();
   gameContainer.innerHTML = "";
